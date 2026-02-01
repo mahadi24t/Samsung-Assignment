@@ -1,34 +1,34 @@
-# Samsung R&D Institute Bangladesh - Internship Recruitment Task
+# Android Developer Assessment Tasks
 
-**Candidate: Md. Mahadi Hasan** 
+**Candidate:** [Your Name]
 **Role:** Developer Evangelist / Android Developer
 **Language:** Java
 
 ---
 
 ## 📂 Project Overview
-This repository contains the solutions for the three assessment tasks. Each application has been developed using **native Android (Java)** with a focus on clean architecture, battery efficiency, and research-backed optimization.
+This repository demonstrates best practices in **native Android (Java)** development, featuring clean architecture, battery-efficient sensing, and research-backed optimization strategies.
 
-### **Task 1: Calculator Application**
+### **Module 1: Robust Calculator**
 * **Location:** `/CalculatorApp`
-* **Description:** A robust calculator implementing standard arithmetic operations (+, -, *, /).
+* **Description:** A production-ready calculator implementing standard arithmetic operations.
 * **Key Features:**
     * **Separation of Concerns:** Logic is decoupled from the UI (MVC pattern).
     * **Error Handling:** Safe division-by-zero checks and input validation.
-    * **UI:** Clean ConstraintLayout implementation.
+    * **UI:** Responsive ConstraintLayout implementation.
 
-### **Task 2: Sensor Reader (Accelerometer)**
+### **Module 2: Energy-Efficient Sensor Reader**
 * **Location:** `/SensorApp`
-* **Description:** An application that reads real-time X, Y, Z coordinates from the device accelerometer.
+* **Description:** An application that monitors real-time device accelerometer data (X, Y, Z).
 * **Engineering Highlight:**
-    * This app implements **Energy-Efficient Sensing**.
-    * It adheres to the `Activity` lifecycle, registering sensors in `onResume` and unregistering in `onPause`.
-    * *Why?* Continuous sensing drains battery. This approach prevents "wake locks" and ensures the sensor sleeps when the app is minimized, as recommended in mobile computing literature.
+    * This app implements **Battery-Aware Sensing**.
+    * It strictly adheres to the `Activity` lifecycle, registering sensors in `onResume` and unregistering in `onPause`.
+    * *Why?* Continuous sensing drains battery. This approach prevents "wake locks" and ensures the sensor sleeps when the app is minimized, aligning with mobile computing research standards.
 
-### **Task 3: Developer Evangelist Blog Post**
+### **Module 3: Technical Documentation**
 * **Location:** `/Task3_Blog/Reading_Android_Sensors.md`
 * **Title:** *Optimizing Mobile Sensing: A Research-Backed Approach to Android Accelerometers*
-* **Content:** A technical tutorial explaining how to build the Task 2 app. It cites academic research (Khan et al., Yurur et al.) to explain the theoretical importance of battery life optimization in mobile sensing.
+* **Content:** A technical article explaining the theoretical engineering behind Module 2. It cites academic research (Khan et al., Yurur et al.) to validate the battery optimization strategies used in the code.
 
 ---
 
@@ -36,7 +36,7 @@ This repository contains the solutions for the three assessment tasks. Each appl
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/](https://github.com/)[YourUsername]/Samsung-Assignment.git
+    git clone [https://github.com/](https://github.com/)[YourUsername]/Android-Developer-Assessment.git
     ```
 2.  **Open in Android Studio:**
     * Open Android Studio -> File -> Open.
