@@ -1,6 +1,6 @@
 # Samsung R&D Institute Bangladesh - Internship Recruitment Task
 
-**Candidate:** [Your Name]
+**Candidate: Md. Mahadi Hasan** 
 **Role:** Developer Evangelist / Android Developer
 **Language:** Java
 
