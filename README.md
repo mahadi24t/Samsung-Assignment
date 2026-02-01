@@ -55,4 +55,4 @@ This repository contains the solutions for the assessment tasks. Each applicatio
 * **Min SDK:** API 24 (Nougat)
 
 ---
-*Thank you for reviewing my submission. I look forward to discussing these implementations further.*
+*Thank you for your time and consideration. I look forward to discussing these implementations further.*
