@@ -2,19 +2,19 @@
 
 **By Md. Mahadi Hasan**
 
-[cite_start]Smartphones have evolved from communication tools into powerful "lifelogging" platforms, capable of unobtrusively capturing our physical activities and environmental contexts[cite: 787]. However, this capability comes at a steep cost. [cite_start]As noted in recent research, continuous and inefficient usage of sensors is a primary cause of rapid battery depletion, potentially draining a fully charged device in mere hours[cite: 764].
+Smartphones have evolved from communication tools into powerful "lifelogging" platforms, capable of unobtrusively capturing our physical activities and environmental contexts [1]. However, this capability comes at a steep cost. As noted in recent research, continuous and inefficient usage of sensors is a primary cause of rapid battery depletion, potentially draining a fully charged device in mere hours [2].
 
 In this guide, we will move beyond simple implementation. We will build an Android Accelerometer application, but we will justify our architectural decisions using findings from mobile computing research. We will specifically address the **Kinetic Battery Model (KiBaM)** and why the `Activity` lifecycle is your greatest tool for energy conservation.
 
 ## The Hardware Reality
 Before writing code, we must understand the physics of our platform.
 
-* [cite_start]**The Cost of Sensing:** While the accelerometer is often considered "low power" compared to GPS (consuming roughly 6-13% of power in active states versus GPS's ~50% [cite: 947, 948, 1148]), it is not negligible.
-* [cite_start]**The CPU Tax:** Research by Crk et al. highlights that the energy cost isn't just the sensor itself; it is the **CPU processing** required to handle the high-frequency data streams (e.g., 180Hz) coming from the hardware[cite: 562, 583].
-* [cite_start]**The Hidden Danger:** Yurur et al. found that aggressive sampling strategies (100% duty cycles) can increase power consumption by a factor of **4.45x** compared to optimized periodic sampling[cite: 216].
+* **The Cost of Sensing:** While the accelerometer is often considered "low power" compared to GPS (consuming roughly 6-13% of power in active states versus GPS's ~50% [2]), it is not negligible.
+* **The CPU Tax:** Research by Crk et al. highlights that the energy cost isn't just the sensor itself; it is the **CPU processing** required to handle the high-frequency data streams (e.g., 180Hz) coming from the hardware [3].
+* **The Hidden Danger:** Yurur et al. found that aggressive sampling strategies (100% duty cycles) can increase power consumption by a factor of **4.45x** compared to optimized periodic sampling [4].
 
 ## The Goal
-We will build a monitor that displays raw $X, Y, Z$ acceleration data. To mitigate the energy risks outlined above, we will implement a strict **lifecycle-aware** registration pattern.
+We will build a monitor that displays raw X, Y, Z acceleration data. To mitigate the energy risks outlined above, we will implement a strict **lifecycle-aware** registration pattern.
 
 ## The Implementation
 
