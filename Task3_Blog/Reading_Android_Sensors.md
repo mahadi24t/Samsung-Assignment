@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     }
     // ...
 }
-
+```
 ### 2. The Science of onPause (The Recovery Effect)
 This is the most critical section. Beginners often register the sensor in `onCreate` and forget it. This is a fatal error.
 
@@ -67,7 +67,7 @@ This is the most critical section. Beginners often register the sensor in `onCre
         // CRITICAL: Unregister immediately to allow CPU sleep and battery recovery.
         sensorManager.unregisterListener(this);
     }
-
+```
 ### 3. Handling Data Streams
 When the sensor is active, the `onSensorChanged` callback receives a steady stream of `SensorEvent` objects.
 
@@ -86,7 +86,7 @@ When the sensor is active, the `onSensorChanged` callback receives a steady stre
         }
     }
 
-
+```
 ## Conclusion
 As developers, we are responsible for the device's longevity. By aligning our code with the physical realities of Lithium-Ion batteries—specifically by respecting the **Recovery Effect** through the `onPause` lifecycle method—we create applications that are robust, professional, and efficient.
 
